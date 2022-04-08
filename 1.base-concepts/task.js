@@ -63,8 +63,8 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
   let dateNowMonth = dateNow.getMonth();
   let dateNowYear = dateNow.getFullYear();
   let month = (dateYear-dateNowYear)*12+(dateMonth-dateNowMonth);
-  
-  let payment = credit * (percent/12/100 + (percent/12/100 / (((1 + percent/12/100)**month - 1))));
+  let interestRate = (percent/12/100);
+  let payment = credit * (interestRate + (interestRate / (((1 + interestRate)**month - 1))));
   totalAmount = payment * month;
 
 return Number(totalAmount.toFixed(2));
