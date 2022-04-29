@@ -2,9 +2,8 @@ function  parseCount(str) {
     const number = Number.parseInt(str, 10);
     if (number){
         return number;
-    } else {
-        throw new Error("Невалидное значение");
-    }    
+    }
+    throw new Error("Невалидное значение");  
 }
 
 function validateCount(str) {
@@ -31,9 +30,8 @@ class Triangle {
 
     getArea() {
         let p = this.getPerimeter();
-        p = p / 2;
-        let s = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
-        s =  parseFloat(s.toFixed(3));
+        let s = Math.sqrt((p / 2) * ((p / 2) - this.a) * ((p /2) - this.b) * ((p / 2) - this.c));
+        s = parseFloat(s.toFixed(3));
         return s;
     }
 
