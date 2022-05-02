@@ -70,15 +70,15 @@ class AlarmClock {
 function testCase() {
     let testAlarm = new AlarmClock;
     testAlarm.start();
-    testAlarm.addClock('14:22', () => console.log('дайте кофи!'), 1);
-    testAlarm.addClock('14:23', () => console.log('КОООфи'), 2);
-    testAlarm.addClock('14:24', () => console.log('где мой кофе?'), 3);
-    testAlarm.addClock('14:25', () => console.log('пора бы поспать'), 4);
+    testAlarm.addClock('14:22', () => console.log('Phone 1'), 1);
+    testAlarm.addClock('14:23', () => console.log('Phone 2'), 2);
+    testAlarm.addClock('14:24', () => console.log('Phone 3'), 3);
+    testAlarm.addClock('14:25', () => console.log('Phone 4'), 4);
     testAlarm.printAlarms();
     testAlarm.removeClock(4);
     testAlarm.addClock('14:26', () => {
         testAlarm.stop();
-        console.log('спать еще рано');
+        console.log('New');
     }, 5);
     testAlarm.printAlarms();
 }
