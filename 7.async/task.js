@@ -69,26 +69,17 @@ class AlarmClock {
 function testCase() {
     let testAlarm = new AlarmClock;
     testAlarm.start();
-<<<<<<< HEAD
     testAlarm.addClock('14:22', () => console.log('Звонок 1'), 1);
     testAlarm.addClock('14:23', () => console.log('Звонок 2'), 2);
     testAlarm.addClock('14:24', () => console.log('Звонок 3'), 3);
     testAlarm.addClock('14:25', () => console.log('Звонок 4'), 4);
-=======
-    testAlarm.addClock('14:22', () => console.log('Phone 1'), 1);
-    testAlarm.addClock('14:23', () => console.log('Phone 2'), 2);
-    testAlarm.addClock('14:24', () => console.log('Phone 3'), 3);
-    testAlarm.addClock('14:25', () => console.log('Phone 4'), 4);
->>>>>>> 59429636681b732e0b9d299941e814e60095afc1
+
     testAlarm.printAlarms();
     testAlarm.removeClock(4);
     testAlarm.addClock('14:26', () => {
         testAlarm.stop();
-<<<<<<< HEAD
         console.log('еще рано');
-=======
         console.log('New');
->>>>>>> 59429636681b732e0b9d299941e814e60095afc1
     }, 5);
     testAlarm.printAlarms();
 }
